@@ -1,0 +1,13 @@
+.lane {
+  position: relative; /* referência para os itens absolutos */
+  height: 3rem; /* altura da linha */
+  background-color: var(--neutral-bg);
+  border-bottom: 1px solid var(--neutral-border);
+  border-radius: 0.25rem;
+  overflow: visible;
+  width: max-content;
+}
+
+.lane:nth-child(even) {
+  background-color: #f9f9f9;
+}

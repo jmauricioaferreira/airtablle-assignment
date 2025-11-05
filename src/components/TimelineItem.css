@@ -1,0 +1,26 @@
+.timeline-item {
+  position: absolute;
+  top: 0;
+  height: 2rem;
+  background-color: var(--brand-primary);
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 0.875rem;
+  padding: 0 0.5rem;
+  line-height: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:hover {
+  background-color: var(--brand-secondary);
+  transform: scale(1.05);
+  z-index: 10;
+}

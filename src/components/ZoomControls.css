@@ -1,0 +1,19 @@
+.zoom-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.zoom-controls button {
+  background-color: var(--brand-secondary);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.zoom-controls button:hover {
+  filter: brightness(1.2);
+}

@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+  background-color: #fff;
+  color: var(--neutral-text);
+}
+:root {
+  --brand-primary: #00b26b;
+  --brand-secondary: #62a8e0;
+  --neutral-bg: #f6f6f6;
+  --neutral-border: #e5e5e9;
+  --neutral-text: #232c36;
+  --neutral-subtle-text: #787879;
+}

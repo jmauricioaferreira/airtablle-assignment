@@ -1,0 +1,34 @@
+.timeline-scale {
+  position: relative;
+  height: 2rem;
+  border-bottom: 1px solid var(--neutral-border);
+  background-color: var(--neutral-bg);
+  overflow: visible;
+  width: max-content;
+  padding-right: 4rem;
+}
+
+.timeline-tick {
+  position: absolute;
+  top: 0.25rem;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: var(--neutral-subtle-text);
+  white-space: nowrap;
+}
+
+.timeline-tick:first-child {
+  transform: none;
+  left: 0;
+}
+
+.timeline-tick::after {
+  content: "";
+  position: absolute;
+  top: 1.4rem;
+  left: 50%;
+  width: 1px;
+  height: calc(100vh);
+  background-color: var(--neutral-border);
+  opacity: 0.5;
+}
