@@ -26,6 +26,14 @@ A compact and zoomable **Timeline component** built with **React + TypeScript**,
 
 ---
 
+## ⚙️ Run & Build
+
+```bash
+npm install
+npm start        # run locally
+npm run build    # build for production
+```
+
 ## 🧩 Implementation Overview
 
 **Project Structure**
