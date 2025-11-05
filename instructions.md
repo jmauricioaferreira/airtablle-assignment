@@ -1,143 +1,49 @@
-📊 Airtable Timeline Assignment
+# Airtable timeline assignment
 
-A compact and zoomable Timeline component built with React + TypeScript, designed to efficiently visualize items across time in horizontal lanes.
+## Expected implementation time:
 
-🚀 Features
+4 hours
 
-Compact lane layout – items that don’t overlap share the same lane
+## High level objective:
 
-Zoom in / Zoom out – dynamically adjusts spacing and scale
+Design and implement a component for visualizing items on a timeline.
 
-Date scale – synchronized with item positions
+## Details:
 
-Smooth scroll – horizontal scrolling for long timelines
+Your timeline component should arrange items in horizontal lanes. These items should be laid out in a compact, space-efficient way: if item A ends before item B starts, they can share a lane instead of being rendered on separate lanes. You may want to slightly relax this constraint to fit in the name of the event (for example, if an item is too short, or the item’s name is too long).
 
-Clean UI – subtle design using CSS variables for consistent theming
+The start and end dates will be formatted as YYYY-MM-DD date strings, for example: `2025-02-20`. You don’t need to worry about hours, minutes, seconds, or time zones. You can assume every item’s end date is the same or later than its start date.
 
-Performance optimized – memoized computations for lanes and layout
+To help you implement the compact lanes, we’ve provided you with `src/assignLanes.js`. Feel free to modify and use this code however you like.
 
-🧠 Design Decisions
+You are welcome to use general purpose libraries (Moment, UI primitive libraries, etc.), but you should avoid using libraries that solve too much of the problem (i.e. renders a timeline).
 
-Used absolute positioning for precise control over each item’s start and end dates
+In addition to rendering the timeline, use whatever time you have remaining to implement any of the following enhancements:
 
-Implemented a custom lane assignment algorithm (assignLanes) to maximize space efficiency
+- Allow zooming in and out of the timeline
+- Allow dragging and dropping to change the start and/or end date of an item
+- Allow editing the name of items inline
+- Any other polish or useful enhancements you can think of
 
-Adopted rem-based scaling (dateToRem) to support zoom and responsive design
+Include a README that covers:
 
-Applied CSS variables (:root) for theming consistency and easy color management
+- What you like about your implementation.
+- What you would change if you were going to do it again.
+- How you made your design decisions. For example, if you looked at other timelines for inspiration, please note that.
+- How you would test this if you had more time.
 
-Used useMemo to prevent unnecessary re-renders when zooming
+If you did not use the starter code, please also include instructions on how to build and run your project so we can see and interact with the timeline component you built. It should render the sample data included in `src/timelineItems.js`.
 
-Styled purely with CSS, avoiding timeline-specific libraries for full control
+What we’re looking for:
 
-🧩 Implementation Overview
+- Clean, readable, maintainable code.
+- A sensible user experience and design for the final product.
 
-Structure
+## Starter code:
 
-src/
-├── components/
-│ ├── Timeline/
-│ │ ├── Timeline.tsx
-│ │ ├── Lane.tsx
-│ │ ├── TimelineItem.tsx
-│ │ ├── TimelineScale.tsx
-│ │ └── ZoomControls.tsx
-│ └── ...
-├── utils/
-│ ├── assignLanes.ts
-│ ├── dateToRem.ts
-│ └── timelineItems.ts
-├── models/
-│ └── timeline.ts
-├── styles/
-│ └── global.css
-└── index.html
+1. Navigate to this project directory
+2. Run `npm install` to install dependencies
+3. Run `npm start` to initialize and connect to a node server with your default browser
+4. Develop in your own local environment
 
-⚙️ How to Run
-npm install
-npm start
-
-This will open the app automatically in your default browser.
-You’ll see a sample dataset rendered from src/utils/timelineItems.ts.
-
-💬 What I Like
-
-The zoom interaction feels smooth and visually synchronized
-
-The lane assignment logic works consistently and is easy to extend
-
-The UI feels balanced, with clean typography and spacing
-
-Code organization is modular and easy to maintain
-
-🔧 What I’d Improve (with more time)
-
-Add drag and drop to adjust item start/end dates directly
-
-Enable inline editing for item titles
-
-Add unit tests for lane assignment and zoom behavior
-
-Group dates by month for a more structured scale
-
-Improve mobile responsiveness and touch zoom
-
-🧪 Testing Approach (if more time)
-
-Snapshot tests for the main Timeline rendering
-
-Unit tests for assignLanes (non-overlapping items reuse lanes)
-
-Visual regression test for zoom and scale alignment
-
-🖌️ Design Inspiration
-
-I took inspiration from:
-
-Airtable’s timeline view
-
-Notion’s project timeline layout
-
-Linear’s clean use of white space and soft shadows
-
-🖼️ Preview
-
-You can include a screenshot in your repo root:
-
-![Timeline Preview](screenshot.png)
-
-💡 Tech Stack
-
-React 18
-
-TypeScript
-
-Parcel (for fast local development)
-
-CSS variables for design consistency
-
-📦 Folder Setup (Starter Instructions Recap)
-
-# install dependencies
-
-npm install
-
-# run locally
-
-npm start
-
-It will start a Parcel dev server and open the project in your browser.
-
-🧾 Summary
-
-✅ Functional compact timeline
-✅ Zooming and date scale synchronized
-✅ Clean, maintainable structure
-✅ No external timeline libraries used
-✅ Ready to extend with drag/drop or editing
-
-📍 Author
-
-José Maurício Azevedo Ferreira
-Frontend Developer — React | TypeScript | Next.js
-GitHub Profile
+Please feel free to use as much or as little of the starter code as you'd like.
